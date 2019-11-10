@@ -1,0 +1,42 @@
+{
+  "name": "bootstrap-list-group-form",
+  "version": "1.0.0",
+  "description": "Bootstrap List Group Form Component",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "css": "npm run css-compile && npm run css-prefix && npm run css-minify",
+    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/bootstrap.scss dist/css/bootstrap-list-group-form.css",
+    "css-minify": "cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap-list-group-form.min.css dist/css/bootstrap-list-group-form.css",
+    "css-prefix": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.min.css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iqbalfn/bootstrap-list-group-form.git"
+  },
+  "keywords": [
+    "ui",
+    "bootstrap",
+    "plugin",
+    "picker",
+    "sidebar"
+  ],
+  "author": "Iqbal Fauzi <iqbalfawz@gmail.com> (https://iqbalfn.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iqbalfn/bootstrap-list-group-form/issues"
+  },
+  "homepage": "https://github.com/iqbalfn/bootstrap-list-group-form#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "clean-css-cli": "^4.3.0",
+    "grunt": "^1.0.4",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-run": "^0.8.1",
+    "node-sass": "^4.12.0",
+    "postcss-cli": "^6.1.2"
+  }
+}
